@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+
+        html,
+        body {
+            height: 100%;
+            font-family: "Fira Sans", sans-serif;
+            background-color: #20c997;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: flex;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #20c997;
+        }
+
+        .form-data-input {
+            width: 43vw;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .form-data-input .form-control {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-data-input .form-control:focus {
+            z-index: 2;
+        }
+
+        .form-data-input input[type="text"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            width: 43vw;
+            margin-bottom: 10px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .resultText {
+            font-family: "Source Code Pro", monospace;
+        }
+    </style>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>      Agricultural Production Optimization     </title>
+</head>
+
+<body class="text-center">
+    <form class="form-data-input" id="my-form" method="POST" , action="{{url_for('home')}}">
+        <h1 class="h3 mb-3 font-weight-bold">Agricultural Production Optimization </h1>
+            
+        <label for="inputNitogen" class="sr-only">Nitrogen</label>
+        <input type="number" name='a' id="inputNitogen" class="form-control" placeholder="Nitrogen" required autofocus>
+        <label for="inputPhosphorus" class="sr-only">Phosphorus</label>
+        <input type="number" name='b' id="inputPhosphorus" class="form-control" placeholder="Phosphorus" required
+            autofocus>
+        <label for="inputPotassium" class="sr-only">Potassium</label>
+        <input type="number" name='c' id="inputPotassium" class="form-control" placeholder="Potassium" required
+            autofocus>
+        <label for="inputTemperature" class="sr-only">Temperature</label>
+        <input type="number" name='d' id="inputTemperature" class="form-control" placeholder="Temperature" required
+            autofocus>
+        <label for="inputHumidity" class="sr-only">Humidity</label>
+        <input type="number" name='e' id="inputHumidity" class="form-control" placeholder="Humidity" required autofocus>
+        <label for="inputPh" class="sr-only">Ph</label>
+        <input type="number" name='f' id="inputPh" class="form-control" placeholder="Ph" required autofocus>
+        <label for="inputRainFall" class="sr-only">Rain Fall</label>
+        <input type="number" name='g' id="inputRainFall" class="form-control" placeholder="Rain Fall" required
+            autofocus>
+
+        <button  class="btn btn-outline-success" type="submit"
+            value='predict!'>Predict</button>
+    
+        <hr>   
+
+
+        
+            
+            {{pr_text}}
+
+
+        <hr>
+
+
+            {{ ki }}
+
+            <p class="mt-5 mb-3 text-muted">&copy; Vitthal Vikash sinha </p>
+    </form>
+</body>
+
+</html>
