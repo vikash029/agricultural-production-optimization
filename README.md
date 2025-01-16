@@ -54,10 +54,6 @@ Configuration settings are available in the `config/` directory. You can modify 
 
 If you would like to contribute to this project, please fork the repository and submit a pull request. Ensure that your contributions adhere to the coding standards and include relevant tests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
 For any questions or issues, please contact Vitthal Vikash mail vitthalvikash02.smart@gmail.com
